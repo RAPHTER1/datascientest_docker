@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  api:
+    image: datascientest/fastapi:1.0.0
+    container_name: api_datascientest
+    ports:
+      - "8000:8000"
+    # networks:
+    #   - mynetwork
+  
+  test1:
+    depends_on:
+      - api
+    build: test1/
+    container_name: test1
+    # networks:
+    #   - mynetwork
+    volumes:
+      - ./logs:/app/logs
+    environment:
+        LOG: "1"
+  test2:
+    depends_on:
+      - api
+    build: test2/
+    container_name: test2
+    # networks:
+    #   - mynetwork
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - LOG=1
+  test3:
+    depends_on:
+      - api
+    build: test3/
+    container_name: test3
+    # networks:
+    #   - mynetwork
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - LOG=1
