@@ -2,16 +2,13 @@
 
 ## Problèmes rencontrés et solutions
 **Problème 1** : Utiliser l'IP du conteneur pour les tests
-    Au début, j'avais configuré les scripts de test pour utiliser l'IP du conteneur API.
-
-    Problème : L'IP change à chaque exécution.
-
-    Solution : Utiliser le nom du service Docker comme URL (`api_datascientest`).
+Au début, j'avais configuré les scripts de test pour utiliser l'IP du conteneur API.
+  - Problème : L'IP change à chaque exécution.
+  - Solution : Utiliser le nom du service Docker comme URL (`api_datascientest`).
 
 **Problème 2** : Le conteneur de test démarre avant l’API
-    En utilisant le nom du service, le problème était que les conteneurs de test se lançaient avant que l'API ne soit prête.
-
-    Conséquences: Les scripts plantaient car l'API n'était pas encore accessible.
+En utilisant le nom du service, le problème était que les conteneurs de test se lançaient avant que l'API ne soit prête.
+  - Conséquences: Les scripts plantaient car l'API n'était pas encore accessible.
 
 **Solutions testées** :
   1. Utiliser `ping` avec `subprocess` -> Mais `ping` n'était pas disponible dans l'image Docker utilisée.
