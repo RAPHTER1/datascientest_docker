@@ -26,7 +26,7 @@ J'ai essayé de me rapprocher d'un workflow professionnel:
 Bien que l'exercice n'était pas orienté sur la programmation en python, j'ai quand même pu améliorer mes compétences. J'ai passé un peu plus de temps sur les scripts parce que j'avais déjà travaillé avec Docker et Docker-Compose
 
 -----
-
+```
 /dockerdevops_FARYOLAX
 ├── docker-compose.yml
 ├── logs
@@ -48,5 +48,5 @@ Bien que l'exercice n'était pas orienté sur la programmation en python, j'ai q
     ├── main.py
     ├── requirements.txt
     └── venv
-
+```
 git clone https://github.com/RAPHTER1/datascientest_docker.git
