@@ -5,17 +5,12 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-LOG_FILE_PATH="logs/script.log"
+LOG_FILE_PATH="logs/api_test.log"
 
 log() {
     local current_time=$(date '+%Y-%m-%d %H:%M:%S')
     message="[$current_time] $1"
-    echo -e "$message" | tee -a "$LOG_PATH_FILE"
-}
-
-error_log() {
-    local error_message="$1"
-    echo "[ERROR] `log "$error_message"`"
+    echo -e "$message" | tee -a "$LOG_FILE_PATH"
 }
 
 log "\n-----------------------------------------
@@ -34,7 +29,7 @@ WELCOME IN DATASCIENTEST API TEST SCRIPT\n\
 # done
 # docker-compose build
 log "Starting tests ..."
-docker-compose build 2>&1 | tee -a "$LOG_PATH_FILE"
-docker-compose up 2>&1 -d | tee -a "$LOG_PATH_FILE"
+docker-compose build
+docker-compose up -d
 log "Tests completed : ./logs/api_test.log"
-docker-compose down 2>&1 | tee -a "$LOG_PATH_FILE"
+docker-compose down

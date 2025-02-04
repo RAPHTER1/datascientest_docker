@@ -4,6 +4,7 @@
 **Problème 1** : Utiliser l'IP du conteneur pour les tests
 Au début, j'avais configuré les scripts de test pour utiliser l'IP du conteneur API.
   - **Solution** : Utiliser le nom du service Docker comme URL (`api_datascientest`).
+  - Je sais que ce n'es pas optimal car l'isolation n'est pas maximal mais au vu de mes connaissances actuels ça me parrassait la meilleur solution.
 
 **Problème 2** : Le conteneur de test démarre avant l’API
 En utilisant le nom du service, le problème était que les conteneurs de test se lançaient avant que l'API ne soit prête.
