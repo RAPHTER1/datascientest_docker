@@ -58,6 +58,7 @@ expected result = {expected_result}
 actual result = {obtained_result}
 
 ==>  {test_status}
+
 '''
     return output
     

@@ -17,6 +17,8 @@ log "\n-----------------------------------------
 WELCOME IN DATASCIENTEST API TEST SCRIPT\n\
 -----------------------------------------"
 
+# ICI j'ai laissé l'ancien script que création des images docker même si je ne m'en sers plus
+
 # for dir in *; do
 #     if [[ $dir =~ ^test ]]; then
 #         if [[ -f "$dir/Dockerfile" ]]; then

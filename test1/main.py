@@ -49,6 +49,7 @@ expected result = 200
 actual result = {status_code}
 
 ==>  {test_status}
+
 '''
     return output
 
